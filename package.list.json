@@ -1,8 +1,8 @@
 [ 
   {
-    name: "Microsoft.WindowsTerminal"
+    "name": "Microsoft.WindowsTerminal"
   },
   { 
-    name: ""
+    "name": "Microsoft.VisualStudioCode"
   }
 ]
