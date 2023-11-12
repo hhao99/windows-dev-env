@@ -1,16 +1,37 @@
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
 properties:
   assertions:
     - resource: Microsoft.Windows.Developer/OsVersion
       directives:
         description: Verify min OS version requirement
         allowPrerelease: true
-      settings: resources:
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
     - resource: Microsoft.Windows.Developer/DeveloperMode
       directives:
         description: Enable Developer Mode
         allowPrerelease: true
       settings:
         Ensure: Present
-        MinVersion: '10.0.22000'
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vscode
+      directives:
+        description: Install Visual Studio code
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: debian
+      directives:
+        description: Install debian wsl
+        allowPrerelease: true
+      settings:
+        id: Debian.Debian
+        source: winget
+
+  configurationVersion: 0.2.0
   
+ 
