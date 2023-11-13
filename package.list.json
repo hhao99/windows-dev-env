@@ -4,5 +4,11 @@
   },
   { 
     "name": "Microsoft.VisualStudioCode"
+  },
+  {
+    "name": "git.git"
+  },
+  {
+    "name": "github.githubdesktop"
   }
 ]
